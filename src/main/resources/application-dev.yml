@@ -1,0 +1,61 @@
+spring:
+
+  application:
+    name: blarybus
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/blaybus
+    username: root
+    password: q1w2e3
+  jpa:
+    hibernate.ddl-auto: update
+
+
+  #?????? ?? ?? board?? ?? user ??? ???? ????? ??
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+  # application.properties
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+
+  # image size
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 30MB
+      max-file-size: 30MB
+
+jwt:
+  secret: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+[]{}|;:,.<>?
+  expiration: 36000000
+
+
+# Swagger UI
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+
+file:
+  dir: C:/Users/chltm/Github/blarybus/src/main/resources/static/img/
+
+#s3
+cloud:
+  aws:
+    s3:
+      bucket: blarybus
+    stack:
+      auto: false
+    region:
+      static: ap-northeast-2
+    credentials:
+      accessKey: fesa
+      secretKey: afds
+
